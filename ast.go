@@ -1644,7 +1644,7 @@ type AliasedTableExpr struct {
 func (node *AliasedTableExpr) Format(buf *TrackedBuffer) {
 	buf.Myprintf("%v%v", node.Expr, node.Partitions)
 	if !node.As.IsEmpty() {
-		buf.Myprintf(" as %v", node.As)
+		buf.Myprintf(" %v", node.As)
 	}
 	if node.Hints != nil {
 		// Hint node provides the space padding.
